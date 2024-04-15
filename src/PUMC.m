@@ -1,7 +1,7 @@
 function [roc_avg, pr_avg] = PUMC(seed, nFold, interaction, drug_feat, prot_feat, dim_imc)
     lambda=0.01;
     alpha=0.03;
-	rng(seed);
+	rng('default');
 	Pint = find(interaction); % pair of interaction
 	Nint = length(Pint);
 	Pnoint = find(~interaction);
